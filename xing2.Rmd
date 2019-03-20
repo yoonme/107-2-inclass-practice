@@ -1,0 +1,149 @@
+---
+title: "yoonme"
+date:2019/3/20
+output: html_document
+---
+
+```{r}
+dialogue <- c('小明說："明天不用上課。"',
+               '小花說："真的嗎？"')
+
+cat(dialogue, sep="\n")
+```
+
+```{r}
+aLogical <- c(T,TRUE,F,FALSE,FALSE)
+class(aLogical)
+```
+
+```{r}
+studentMajors <- factor(
+  c("經濟系", "經濟系", "法律系")
+)
+```
+
+```{r}
+typeof(studentMajors)
+```
+
+```{r}
+levels(studentMajors)
+```
+
+```{r}
+studentMajors
+```
+
+```{r}
+as.integer(studentMajors)
+```
+
+```{r}
+stringInteger <- c("1","2","-11")
+class(stringInteger) # 無法進行數值運算
+```
+
+```{r}
+trueInteger <- as.integer(stringInteger)
+class(trueInteger) # 可以進行數值運算
+```
+
+
+```{r}
+colors<- factor(
+  c("紅色","白色","黑色")
+)
+class(colors)
+typeof(colors)
+levels(colors)
+as.integer(colors)
+```
+
+```{r}
+typeof(colors)
+```
+
+```{r}
+levels(colors)
+```
+
+```{r}
+colors
+```
+
+```{r}
+as.integer(colors)
+```
+
+```{r}
+trueInteger <- as.integer(stringInteger)
+class(trueInteger) # 可以進行數值運算
+```
+
+```{r}
+library(lubridate)
+```
+
+```{r}
+dtObject<-ymd_hms("1970-01-01 00:02:53") 
+```
+
+```{r}
+dtObjectVector<-ymd_hms(
+  c("1970-01-01 00:02:53",
+    "1980-02-11 11:25:22")
+)
+```
+
+```{r}
+class(dtObject)
+```
+
+```{r}
+typeof(dtObject)
+```
+
+```{r}
+as.integer(dtObject)
+```
+
+#Timezone
+
+```{r}
+Sys.timezone()
+```
+
+
+
+
+
+
+
+
+
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
