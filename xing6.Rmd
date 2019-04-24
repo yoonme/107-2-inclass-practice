@@ -1,0 +1,160 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+
+
+```{r}
+Mat2 <- matrix(c("a","b","c","d"), 2, 2
+)
+Mat2
+```
+
+```{r}
+class(Mat2)
+typeof(Mat2)
+Mat2[[2]]
+Mat2[[3]]
+```
+
+
+#data.frame
+```{r}
+StuDF <- data.frame(StuID=c(1,2,3,4,5), ##欄位名稱=欄位值
+                  name=c("小明","大雄","胖虎","小新","大白"),
+                  score=c(80,60,90,70,50))
+StuDF 
+```
+
+```{r}
+class(StuDF)
+typeof(StuDF)
+```
+
+```{r}
+StuDF
+StuDF[["name"]][[3]]
+```
+
+```{r}
+StuDF$name <- as.character(StuDF$name)
+class(StuDF$name)
+```
+
+```{r}
+StuDF2 <- data.frame(StuID=c(1,2,3,4,5), ##欄位名稱=欄位值
+                  name=c("小明","大雄","胖虎","小新","大白"),
+                  score=c(80,60,90,70,50))
+StuDF 
+```
+
+```{r}
+Stulist<- list(
+  StuID=c(1,2,3,4,5),##欄位名稱=欄位值
+  name=c("小明","大雄","胖虎","小新","大白"),
+  score=c(80,60,90,70,50))
+Stulist
+```
+
+```{r}
+as.data.frame(Stulist) -> StuDF3
+class(StuDF3)
+```
+
+```{r}
+StuDF3
+```
+
+```{r}
+as.data.frame(Stulist,stringsAsFactors = F) -> StuDF4
+class(StuDF4)
+```
+
+```{r}
+StuDF4
+```
+
+
+
+
+
+
+
+```{r}
+LETTERS
+chosenLETTERS <- LETTERS[1:15]
+matObj1 <- matrix(chosenLETTERS,5,3)
+matObj1
+```
+
+```{r}
+matObj1
+
+matObj1[[7]] #place
+         #row  #columns
+matObj1[c(1,4),c(2,3)]  
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
