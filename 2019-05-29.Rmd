@@ -127,10 +127,40 @@ gpa_fun("92aS67fee") # 顯示82.85276
 gpa_fun("aa829838s") # 查無此學號
 ```
 
+```{r}
+a <- readline(prompt = "1")
+if(a==1) {
+  print("1")
+} else if(a==2) {
+  print("2")
+} else if(a==3) {
+  print("3")
+} else {
+  print("4")
+}
+```
 
+```{r}
+fizzbuzz <- function(input){
 
+  if(input %% 15 == 0){print("fizzbuzz")}
+  else if(input %% 5 == 0){print("buzz")}
+  else if(input %% 3 == 0 ){print("fizz")}
+  else{message("other situation")}
+}
+```
 
+```{r}
+a <- c(3,1,5)
+a
+a>2
+```
 
+```{r}
+if(a>2) {
+  print("a>2")
+}
+```
 
 
 
